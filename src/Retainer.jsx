@@ -13,7 +13,7 @@ class Retainer extends Component {
     	name = new Name({ 'gender': gender }),
     	occupation = new Occupation(),
     	wealth = parseInt(occupation.state.wealth),
-    	armor, weapon;
+    	armor, weapon, alignment;
 
     if(wealth > 0) {
     	wealth += (d4(1) - 1);
@@ -21,6 +21,7 @@ class Retainer extends Component {
 
     armor = getArmor(occupation);
     weapon = getWeapon(occupation);
+    alignment = tossCoin() ? 'lawful' : 'chaotic';
 
     this.state = {
       'name': name.state.name,
@@ -37,6 +38,7 @@ class Retainer extends Component {
       'clothes': getClothes(wealth),
       'armor': armor,
       'weapon': weapon,
+      'alignment': alignment,
     };
   }
 

@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import FontIcon from 'material-ui/FontIcon';
+import Retainer from './Retainer';
+
 import indexCard from './assets/img/index-card.png';
 import './assets/css/retainerList.css';
-import Paper from 'material-ui/Paper';
-import Retainer from './Retainer';
 
 const STYLES = {
   chip: {
@@ -77,6 +78,9 @@ class RetainerList extends Component {
       <li className="index-card-holder" key={ i }>
         <div class="index-card">
           <header className="hireling-name"><strong>{ r.state.name }</strong> <em>the { r.state.occupation.state.job.Name }</em></header>
+          <div className={ r.state.alignment === 'lawful' ? 'alignment-marker alignment-law' : 'alignment-marker alignment-chaos' }>
+            { r.state.alignment }
+          </div>
           <table className="attribute-list-table">
             <thead>
               <tr>

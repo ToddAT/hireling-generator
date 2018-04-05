@@ -83,6 +83,25 @@ font-family: 'Gaegu', cursive;
 	text-align: center;
 }
 
+.alignment-marker {
+	display: block;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	font-family: 'Permanent Marker', cursive;
+	text-align: center;
+	opacity: 0.5;
+	transform: rotate(-15deg);
+}
+
+.alignment-law {
+	color: #00ff;;
+}
+
+.alignment-chaos {
+	color: hsla(350, 84%, 40%, 1.0);
+}
+
 .attribute-list-table {
 	margin: 0 auto;
 }
