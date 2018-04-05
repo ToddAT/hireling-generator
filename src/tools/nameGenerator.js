@@ -1,0 +1,1 @@
+const WORDS = require('../data/name-words');
