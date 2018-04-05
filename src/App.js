@@ -22,6 +22,11 @@ class App extends Component {
           <div className="content-wrapper">
             <RetainerList count="50" />
           </div>
+          <footer className="App-footer">
+            <p>
+              A generator by Hexed Press. Support us via <a href="https://www.patreon.com/hexedpress">Patreon</a>.
+            </p>
+          </footer>
         </MuiThemeProvider>
       </div>
     );
