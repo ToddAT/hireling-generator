@@ -24,7 +24,7 @@ class App extends Component {
           </div>
           <footer className="App-footer">
             <p>
-              A generator by Hexed Press. Support us via <a href="https://www.patreon.com/hexedpress">Patreon</a>.
+              A generator by <a href="http://hexed.press">Hexed Press</a>. Support us via <a href="https://www.patreon.com/hexedpress">Patreon</a>.
             </p>
           </footer>
         </MuiThemeProvider>
