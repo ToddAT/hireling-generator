@@ -9,7 +9,7 @@ exports.ALL = [
     "Special": "",
     "Wealth": "3",
     "Weapon": "cleric",
-    "Armor": "heavy",
+    "Armor": "light,medium,heavy",
   },
   {
     "Name": "Veteran (Fighter)",
@@ -20,8 +20,8 @@ exports.ALL = [
     "Share": "50%",
     "Special": "",
     "Wealth": "3",
-    "Weapon": "melee",
-    "Armor": "heavy",
+    "Weapon": "melee|secondary",
+    "Armor": "light,medium,heavy",
   },
   {
     "Name": "Medium (Magic-User)",
@@ -33,7 +33,7 @@ exports.ALL = [
     "Special": "",
     "Wealth": "3",
     "Weapon": "magic",
-    "Armor": "heavy",
+    "Armor": "",
   },
   {
     "Name": "Apprentice (Specialist)",
@@ -45,6 +45,6 @@ exports.ALL = [
     "Special": "",
     "Wealth": "3",
     "Weapon": "melee",
-    "Armor": "heavy",
+    "Armor": "light,medium",
   },
 ];

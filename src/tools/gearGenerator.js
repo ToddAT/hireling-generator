@@ -21,12 +21,58 @@ export const getArmor = (occ) => {
 	}
 
 	var armorList = ARMORS.ALL,
-		armors = armorList[occ.state.job.Armor],
-		len = armors.length;
+		armorSet = [],
+		len;
 
-	return armors[getRandomArbitrary(0, len - 1)];
+	occ.state.job.Armor.split('|').map((armorOptions) => {
+		var armors = [];
+
+		armorOptions.split(',').map((arm) =>
+			armors = armors.concat(armorList[arm])
+		);
+
+		len = armors.length;
+		armorSet.push(armors[getRandomArbitrary(0, len - 1)]);
+	});
+
+	return armorSet.join(', ');
 };
 
+export const getWeapon = (occ) => {
+	var weaponList = WEAPONS.ALL,
+		weaponSet = [], finalWeaponSet = [],
+		type, weapons, len;
+
+	if(!occ.state || !occ.state.job || !occ.state.job.Weapon) {
+		type = 'simple';
+	} else {
+		type = occ.state.job.Weapon;
+	}
+
+	type.split('|').map((weaponOptions) => {
+		var weapons = [];
+
+		weaponOptions.split(',').map((arm) =>
+			weapons = weapons.concat(weaponList[arm])
+		);
+
+		len = weapons.length;
+		weaponSet.push(weapons[getRandomArbitrary(0, len - 1)]);
+	});
+
+	finalWeaponSet = weaponSet.map((w) => {
+		if(typeof weaponList[w] !== 'undefined') {
+			return weaponList[w][getRandomArbitrary(0, weaponList[w].length - 1)];
+		} else {
+			return w;
+		}
+	});
+
+
+	return finalWeaponSet.join(', ');
+};
+
+/*
 export const getWeapon = (occ) => {
 	var weaponList = WEAPONS.ALL,
 		type, weapons, len;
@@ -42,3 +88,4 @@ export const getWeapon = (occ) => {
 	
 	return weapons[getRandomArbitrary(0, len - 1)];
 };
+*/

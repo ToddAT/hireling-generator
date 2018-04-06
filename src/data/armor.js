@@ -15,4 +15,10 @@ exports.ALL = {
 		'lamellar armor [AC 4/17]',
 		'plate armor [AC 3/18]',
 	],
+	'shield': [
+		'',
+		'buckler',
+		'wooden shield',
+		'steel shield',
+	],
 };

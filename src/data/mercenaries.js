@@ -8,7 +8,7 @@ exports.ALL = [
     "Share": "20%",
     "Special": "",
     "Wealth": "3",
-    "Weapon": "bow",
+    "Weapon": "bow|secondary",
     "Armor": "light",
   },
   {
@@ -20,8 +20,8 @@ exports.ALL = [
     "Share": "20%",
     "Special": "",
     "Wealth": "3",
-    "Weapon": "crossbow",
-    "Armor": "heavy",
+    "Weapon": "crossbow|secondary",
+    "Armor": "medium,heavy",
   },
   {
     "Name": "Cavalier (Mercenary)",
@@ -33,7 +33,7 @@ exports.ALL = [
     "Special": "",
     "Wealth": "3",
     "Weapon": "melee",
-    "Armor": "light",
+    "Armor": "light,medium",
   },
   {
     "Name": "Horseman (Mercenary)",
@@ -45,7 +45,7 @@ exports.ALL = [
     "Special": "",
     "Wealth": "3",
     "Weapon": "melee",
-    "Armor": "medium",
+    "Armor": "medium,heavy",
   },
   {
     "Name": "Man-At-Arms (Mercenary)",
@@ -56,8 +56,8 @@ exports.ALL = [
     "Share": "20%",
     "Special": "",
     "Wealth": "3",
-    "Weapon": "melee",
-    "Armor": "heavy",
+    "Weapon": "melee|secondary",
+    "Armor": "light,medium,heavy",
   },
   {
     "Name": "Axeman (Mercenary)",
@@ -68,8 +68,8 @@ exports.ALL = [
     "Share": "20%",
     "Special": "",
     "Wealth": "3",
-    "Weapon": "axe",
-    "Armor": "heavy",
+    "Weapon": "axe|secondary",
+    "Armor": "medium,heavy",
   },
   {
     "Name": "Spearman (Mercenary)",
@@ -80,8 +80,8 @@ exports.ALL = [
     "Share": "20%",
     "Special": "",
     "Wealth": "3",
-    "Weapon": "spear",
-    "Armor": "heavy",
+    "Weapon": "spear|secondary",
+    "Armor": "medium,heavy",
   },
   {
     "Name": "Pikeman (Mercenary)",
@@ -92,7 +92,7 @@ exports.ALL = [
     "Share": "20%",
     "Special": "",
     "Wealth": "3",
-    "Weapon": "polearm",
-    "Armor": "heavy",
+    "Weapon": "polearm|secondary",
+    "Armor": "medium,heavy",
   },
 ];

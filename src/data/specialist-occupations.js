@@ -8,6 +8,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "3",
+    "Weapon": "magic",
   },
   {
     "Name": "Henchman",
@@ -28,6 +29,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "3",
+    "Weapon": "magic",
   },
   {
     "Name": "Scholar",
@@ -38,6 +40,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "3",
+    "Weapon": "magic",
   },
   {
     "Name": "Spy",

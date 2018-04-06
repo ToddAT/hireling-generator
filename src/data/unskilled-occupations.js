@@ -8,7 +8,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "1",
-    "Armor": "light",
+    "Armor": "light,medium",
     "Weapon": "melee",
   },
   {
