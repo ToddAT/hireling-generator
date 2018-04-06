@@ -35,3 +35,31 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+@media only screen and (max-width: 768px) {
+  .content-wrapper {
+    margin: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .content-wrapper {
+    margin: 0 1rem;
+  }
+
+  .App-intro {
+    margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .App-intro {
+    margin: 1rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .App-intro {
+    margin: 1rem 10rem;
+  }
+}

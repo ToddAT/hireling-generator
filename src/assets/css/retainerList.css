@@ -5,7 +5,7 @@ font-family: 'Gaegu', cursive;
 */
 
 .section-header {
-	margin: 1em 0 .5em 0;
+	margin: 1rem 0 .5rem 0;
 	font-size: xx-large;
 	font-family: 'Chicle', cursive;
 }
@@ -133,4 +133,29 @@ font-family: 'Gaegu', cursive;
 	font-family: 'Permanent Marker', cursive;
 	text-align: center;
 	text-transform: uppercase;
+}
+
+@media only screen and (max-width: 320px) {
+	.index-card {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+		width: 280px;
+	}
+
+	.attribute-list-header {
+		font-size: small;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.retainer-list-summary {
+		font-size: large;
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+	.retainer-list-summary {
+		font-size: x-large;
+	}
 }
