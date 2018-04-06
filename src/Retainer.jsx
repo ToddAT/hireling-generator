@@ -21,7 +21,7 @@ class Retainer extends Component {
 
     armor = getArmor(occupation);
     weapon = getWeapon(occupation);
-    alignment = tossCoin() ? 'lawful' : 'chaotic';
+    alignment = this._generateAlignment();
 
     this.state = {
       'name': name.state.name,
@@ -40,6 +40,25 @@ class Retainer extends Component {
       'weapon': weapon,
       'alignment': alignment,
     };
+  }
+
+  _generateAlignment() {
+    var rnd = d6(1);
+
+    switch(rnd) {
+      case 1:
+      case 2:
+        return 'chaotic';
+        break;
+      case 3:
+      case 4:
+        return 'neutral';
+        break;
+      case 5:
+      case 6:
+        return 'lawful';
+        break;
+    }
   }
 
   render() {

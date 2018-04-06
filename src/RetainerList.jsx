@@ -78,7 +78,7 @@ class RetainerList extends Component {
       <li className="index-card-holder" key={ i }>
         <div class="index-card">
           <header className="hireling-name"><strong>{ r.state.name }</strong> <em>the { r.state.occupation.state.job.Name }</em></header>
-          <div className={ r.state.alignment === 'lawful' ? 'alignment-marker alignment-law' : 'alignment-marker alignment-chaos' }>
+          <div className={  'alignment-marker alignment-' + r.state.alignment }>
             { r.state.alignment }
           </div>
           <table className="attribute-list-table">

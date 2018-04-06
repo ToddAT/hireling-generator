@@ -94,11 +94,11 @@ font-family: 'Gaegu', cursive;
 	transform: rotate(-15deg);
 }
 
-.alignment-law {
-	color: #00ff;;
+.alignment-lawful {
+	color: #00ff;
 }
 
-.alignment-chaos {
+.alignment-chaotic {
 	color: hsla(350, 84%, 40%, 1.0);
 }
 
