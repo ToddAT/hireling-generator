@@ -9,7 +9,8 @@ exports.ALL = [
     "Special": "",
     "Wealth": "1",
     "Armor": "light,medium",
-    "Weapon": "melee",
+    "Weapon": "one-hander,one-hander+shield,two-hander,melee",
+    "Gear": "military",
   },
   {
     "Name": "Laborer",
@@ -20,6 +21,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "1",
+    "Gear": "misc",
   },
   {
     "Name": "Linkboy",
@@ -30,6 +32,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "1",
+    "Gear": "adventure",
   },
   {
     "Name": "Oarsman (Sailor)",
@@ -40,6 +43,7 @@ exports.ALL = [
     "Share": "20%",
     "Special": "",
     "Wealth": "1",
+    "Gear": "misc",
   },
   {
     "Name": "Servant",
@@ -50,6 +54,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "1",
+    "Gear": "misc",
   },
   {
     "Name": "Slave",

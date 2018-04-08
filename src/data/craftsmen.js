@@ -8,6 +8,7 @@ exports.ALL = [
 	    "Share": "",
 	    "Special": "",
     	"Wealth": "3",
+    	"Gear": "craft|misc",
 	},
 	{
 	    "Name": "Tailor",
@@ -18,6 +19,7 @@ exports.ALL = [
 	    "Share": "",
 	    "Special": "",
     	"Wealth": "3",
+    	"Gear": "craft|misc",
 	},
 	{
 	    "Name": "Stonemason",
@@ -28,6 +30,7 @@ exports.ALL = [
 	    "Share": "",
 	    "Special": "",
     	"Wealth": "3",
+    	"Gear": "craft|misc",
 	},
 	{
 	    "Name": "Caretaker",
@@ -38,5 +41,6 @@ exports.ALL = [
 	    "Share": "",
 	    "Special": "",
     	"Wealth": "3",
+    	"Gear": "craft|misc",
 	},
 ];

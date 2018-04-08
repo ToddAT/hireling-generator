@@ -8,6 +8,7 @@ exports.ALL = [
     "Share": "",
     "Special": "5% commission on money handled",
     "Wealth": "2",
+    "Gear": "scholar|misc",
   },
   {
     "Name": "Animal Handler",
@@ -18,6 +19,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "2",
+    "Gear": "adventure|misc",
   },
   {
     "Name": "Armorer",
@@ -28,6 +30,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "2",
+    "Gear": "craft|military",
   },
   {
     "Name": "Butler",
@@ -38,6 +41,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "2",
+    "Gear": "misc",
   },
   {
     "Name": "Coachman",
@@ -48,6 +52,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "2",
+    "Gear": "misc",
   },
   {
     "Name": "Craftsman",
@@ -68,6 +73,7 @@ exports.ALL = [
     "Share": "10%",
     "Special": "",
     "Wealth": "2",
+    "Gear": "adventure|wilderness",
   },
   {
     "Name": "Mercenary",
@@ -94,6 +100,7 @@ exports.ALL = [
     "Share": "20%",
     "Special": "",
     "Wealth": "2",
+    "Gear": "sea|misc",
   },
   {
     "Name": "Captain (Sailor)",
@@ -104,6 +111,7 @@ exports.ALL = [
     "Share": "100%",
     "Special": "",
     "Wealth": "2",
+    "Gear": "sea|misc",
   },
   {
     "Name": "Navigator (Sailor)",
@@ -114,6 +122,7 @@ exports.ALL = [
     "Share": "50%",
     "Special": "",
     "Wealth": "2",
+    "Gear": "sea|misc",
   },
   {
     "Name": "Slave Master",
@@ -124,6 +133,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "2",
+    "Gear": "misc",
   },
   {
     "Name": "Teamster",
@@ -134,5 +144,6 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "2",
+    "Gear": "wilderness|misc",
   }
 ];

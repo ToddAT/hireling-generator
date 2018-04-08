@@ -76,7 +76,7 @@ class RetainerList extends Component {
 
     const retainerListItems = this.state.retainers.map((r, i) =>
       <li className="index-card-holder" key={ i }>
-        <div class="index-card">
+        <div className="index-card">
           <header className="hireling-name"><strong>{ r.state.name }</strong> <em>the { r.state.occupation.state.job.Name }</em></header>
           <div className={  'alignment-marker alignment-' + r.state.alignment }>
             { r.state.alignment }
@@ -111,6 +111,7 @@ class RetainerList extends Component {
             { r.state.clothes }
             { r.state.armor !== '' ? ', ' + r.state.armor : ''  }
             { r.state.weapon !== '' ? ', ' + r.state.weapon : ''  }
+            { r.state.gear !== '' ? ', ' + r.state.gear : ''  }
           </p>
         </div>
       </li>

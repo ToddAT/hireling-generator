@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Name from './Name';
 import Occupation from './Occupation';
 import { d4, d6, tossCoin } from './tools/random.js';
-import { getClothes, getArmor, getWeapon } from './tools/gearGenerator.js';
+import { getClothes, getArmor, getWeapon, getGear } from './tools/gearGenerator.js';
 
 class Retainer extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Retainer extends Component {
     	name = new Name({ 'gender': gender }),
     	occupation = new Occupation(),
     	wealth = parseInt(occupation.state.wealth),
-    	armor, weapon, alignment;
+    	armor, weapon, gear, alignment;
 
     if(wealth > 0) {
     	wealth += (d4(1) - 1);
@@ -21,6 +21,7 @@ class Retainer extends Component {
 
     armor = getArmor(occupation);
     weapon = getWeapon(occupation);
+    gear = getGear(occupation);
     alignment = this._generateAlignment();
 
     this.state = {
@@ -39,6 +40,7 @@ class Retainer extends Component {
       'armor': armor,
       'weapon': weapon,
       'alignment': alignment,
+      'gear': gear,
     };
   }
 

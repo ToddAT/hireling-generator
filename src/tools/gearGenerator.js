@@ -3,6 +3,161 @@ import { getRandomArbitrary } from './random.js';
 const CLOTHES = require('./../data/clothes');
 const ARMORS = require('./../data/armor');
 const WEAPONS = require('./../data/weapons');
+const GEAR = require('./../data/gear');
+
+const flatten = function(arr, result = []) {
+  for (let i = 0, length = arr.length; i < length; i++) {
+    const value = arr[i];
+    if (Array.isArray(value)) {
+      flatten(value, result);
+    } else {
+      result.push(value);
+    }
+  }
+  return result;
+};
+
+const getRandomArrayItem = (arr) => {
+	return arr[getRandomArbitrary(0, (arr.length - 1))];
+};
+
+/*
+ * parseEntryText Example:
+ *	INPUT:  (String) 'one-hander+shield,two-hander|secondary'
+ *	OUTPUT: (Nested Array)
+ *		[
+ *			[
+ *				["one-hander", "shield"],
+ *				["two-hander"]
+ *			],
+ *			[
+ *				["secondary"]
+ *			]
+ *		]
+ * 
+ *	INUT: 'light,medium'
+ *	OUTPUT:
+ *		[
+ *			[
+ *				["light"],
+ *				["medium"]
+ *			]
+ *		]
+ *
+*/
+const parseEntryText = (entryText) => {
+	var superEntries = entryText.split('|'),
+		entriesList = [],
+		subEntries, entry, subEntry;
+
+	superEntries.map((sEntry) => {
+		entry = sEntry.split(',');
+	    subEntries = [];
+	    
+	    entry.map((sbEntry) =>
+	    	subEntries.push(sbEntry.split('+'))
+	    );
+	    
+	    entriesList.push(subEntries);
+	});
+
+	return entriesList;
+};
+
+/*
+ * getRandomEntrySet Example:
+ *	INPUT: (String) -> (Nested Array)
+ *		[
+ *			[
+ *				["one-hander", "shield"],
+ *				["two-hander"]
+ *			],
+ *			[
+ *				["secondary"]
+ *			]
+ *		]
+ * 
+ *	INUT: (String) -> (Nested Array)
+ *		[
+ *			[
+ *				["light"],
+ *				["medium"]
+ *			]
+ *		]
+ *
+*/
+const getRandomEntrySet = (entrySet) => {
+	var entries = [], entry, subEntry;
+
+	if(typeof entrySet === 'string') {
+		entrySet = parseEntryText(entrySet);
+	}
+
+	entrySet.map((entry) => {
+		if(entry.length < 2) {
+			entries.push(entry[0]);
+		} else {
+			entries.push(getRandomArrayItem(entry));
+		}
+	});
+
+	return entries;
+};
+
+const getRandomEntry = (entry, dataset) => {
+	let output = [],
+		temp = [],
+		randomEntry, items, data, rnd;
+
+	data = dataset.ALL? dataset.ALL : dataset;
+
+	randomEntry = getRandomEntrySet(entry);
+
+	randomEntry.map((n) => {
+		items = fetchDataEntries(n, dataset);
+
+		if(items.length < 2) {
+			temp.push(items[0]);
+		} else {
+			temp.push(getRandomArrayItem(items));
+		}
+	});
+
+	temp = flatten(temp);
+
+	temp.map((t) => {
+		output.push(drillDownEntries(t, dataset));
+	});
+
+	return output;
+};
+
+const fetchDataEntries = (entry, dataset) => {
+	var data = dataset.ALL? dataset.ALL : dataset;
+
+	return data[entry]? data[entry] : [ entry ];
+};
+
+const drillDownEntries = (entry, dataset) => {
+	let output, data, rnd;
+
+	data = dataset.ALL? dataset.ALL : dataset;
+
+	if(data[entry]) {
+		rnd = getRandomArrayItem(data[entry]);
+
+		if(data[rnd]) {
+			if(data[rnd].length > 1) {
+				rnd = drillDownEntries(rnd, dataset);
+			} else {
+				return data[rnd][0];
+			}
+		}
+		return rnd;
+	} else {
+		return entry;
+	}
+};
 
 export const getClothes = (n) => {
 	var clothes = CLOTHES.ALL,
@@ -20,20 +175,7 @@ export const getArmor = (occ) => {
 		return '';
 	}
 
-	var armorList = ARMORS.ALL,
-		armorSet = [],
-		len;
-
-	occ.state.job.Armor.split('|').map((armorOptions) => {
-		var armors = [];
-
-		armorOptions.split(',').map((arm) =>
-			armors = armors.concat(armorList[arm])
-		);
-
-		len = armors.length;
-		armorSet.push(armors[getRandomArbitrary(0, len - 1)]);
-	});
+	var armorSet = getRandomEntry(occ.state.job.Armor, ARMORS);
 
 	return armorSet.join(', ');
 };
@@ -41,7 +183,7 @@ export const getArmor = (occ) => {
 export const getWeapon = (occ) => {
 	var weaponList = WEAPONS.ALL,
 		weaponSet = [], finalWeaponSet = [],
-		type, weapons, len;
+		temp, type, weapons, weapon, len;
 
 	if(!occ.state || !occ.state.job || !occ.state.job.Weapon) {
 		type = 'simple';
@@ -49,43 +191,17 @@ export const getWeapon = (occ) => {
 		type = occ.state.job.Weapon;
 	}
 
-	type.split('|').map((weaponOptions) => {
-		var weapons = [];
+	weaponSet = getRandomEntry(type, WEAPONS);
 
-		weaponOptions.split(',').map((arm) =>
-			weapons = weapons.concat(weaponList[arm])
-		);
-
-		len = weapons.length;
-		weaponSet.push(weapons[getRandomArbitrary(0, len - 1)]);
-	});
-
-	finalWeaponSet = weaponSet.map((w) => {
-		if(typeof weaponList[w] !== 'undefined') {
-			return weaponList[w][getRandomArbitrary(0, weaponList[w].length - 1)];
-		} else {
-			return w;
-		}
-	});
-
-
-	return finalWeaponSet.join(', ');
+	return weaponSet.join(', ');
 };
 
-/*
-export const getWeapon = (occ) => {
-	var weaponList = WEAPONS.ALL,
-		type, weapons, len;
-
-	if(!occ.state || !occ.state.job || !occ.state.job.Weapon) {
-		type = 'simple';
-	} else {
-		type = occ.state.job.Weapon;
+export const getGear = (occ) => {
+	if(!occ.state || !occ.state.job || !occ.state.job.Gear) {
+		return '';
 	}
 
-	weapons = weaponList[type] ? weaponList[type] : weaponList['simple'];
-	len = weapons.length;
-	
-	return weapons[getRandomArbitrary(0, len - 1)];
+	var gearSet = getRandomEntry(occ.state.job.Gear, GEAR);
+
+	return gearSet.join(', ');
 };
-*/

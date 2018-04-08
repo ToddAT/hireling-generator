@@ -8,8 +8,9 @@ exports.ALL = [
     "Share": "50%",
     "Special": "",
     "Wealth": "3",
-    "Weapon": "cleric",
+    "Weapon": "blunt,blunt+shield,great-blunt",
     "Armor": "light,medium,heavy",
+    "Gear": "holy|adventure",
   },
   {
     "Name": "Veteran (Fighter)",
@@ -22,6 +23,7 @@ exports.ALL = [
     "Wealth": "3",
     "Weapon": "melee|secondary",
     "Armor": "light,medium,heavy",
+    "Gear": "military|adventure",
   },
   {
     "Name": "Medium (Magic-User)",
@@ -33,7 +35,7 @@ exports.ALL = [
     "Special": "",
     "Wealth": "3",
     "Weapon": "magic",
-    "Armor": "",
+    "Gear": "magic|adventure",
   },
   {
     "Name": "Apprentice (Specialist)",
@@ -46,5 +48,6 @@ exports.ALL = [
     "Wealth": "3",
     "Weapon": "melee",
     "Armor": "light,medium",
+    "Gear": "wilderness|adventure",
   },
 ];
