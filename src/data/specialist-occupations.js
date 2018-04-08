@@ -9,7 +9,7 @@ exports.ALL = [
     "Special": "",
     "Wealth": "3",
     "Weapon": "magic",
-    "Gear": "magic|scholar",
+    "Gear": "scholar|strange,misc",
   },
   {
     "Name": "Henchman",
@@ -31,7 +31,7 @@ exports.ALL = [
     "Special": "",
     "Wealth": "3",
     "Weapon": "magic",
-    "Gear": "medical|scholar",
+    "Gear": "medical|scholar,misc,strange",
   },
   {
     "Name": "Scholar",
@@ -43,7 +43,7 @@ exports.ALL = [
     "Special": "",
     "Wealth": "3",
     "Weapon": "magic",
-    "Gear": "magic|scholar",
+    "Gear": "scholar|misc",
   },
   {
     "Name": "Spy",

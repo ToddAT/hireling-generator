@@ -21,7 +21,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "1",
-    "Gear": "misc",
+    "Gear": "misc,strange",
   },
   {
     "Name": "Linkboy",
@@ -43,7 +43,7 @@ exports.ALL = [
     "Share": "20%",
     "Special": "",
     "Wealth": "1",
-    "Gear": "misc",
+    "Gear": "misc,strange",
   },
   {
     "Name": "Servant",
@@ -54,7 +54,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "1",
-    "Gear": "misc",
+    "Gear": "misc,strange",
   },
   {
     "Name": "Slave",
@@ -65,5 +65,6 @@ exports.ALL = [
     "Share": "",
     "Special": "slavery",
     "Wealth": "0",
+    "Gear": "misc,strange",
   },
 ];

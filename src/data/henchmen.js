@@ -35,7 +35,7 @@ exports.ALL = [
     "Special": "",
     "Wealth": "3",
     "Weapon": "magic",
-    "Gear": "magic|adventure",
+    "Gear": "magic|adventure,misc,strange",
   },
   {
     "Name": "Apprentice (Specialist)",

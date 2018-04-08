@@ -19,7 +19,7 @@ exports.ALL = [
     "Share": "",
     "Special": "",
     "Wealth": "2",
-    "Gear": "adventure|misc",
+    "Gear": "adventure|misc,strange",
   },
   {
     "Name": "Armorer",
@@ -100,7 +100,7 @@ exports.ALL = [
     "Share": "20%",
     "Special": "",
     "Wealth": "2",
-    "Gear": "sea|misc",
+    "Gear": "sea|misc,strange",
   },
   {
     "Name": "Captain (Sailor)",
