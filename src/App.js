@@ -13,10 +13,22 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.updatePopCount = this.updatePopCount.bind(this);
+    this.repopRetainers = this.repopRetainers.bind(this);
+
     this.state = {
       'count': props.count,
       'retainers': generateRetainers(props.count),
     };
+  }
+
+  updatePopCount(e) {
+    this.setState({'count': e.target.value});
+  }
+
+  repopRetainers(e) {
+    e.preventDefault();
+    this.setState({'retainers': generateRetainers(this.state.count)});
   }
 
   render() {
@@ -26,6 +38,18 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Fifty Random Hirelings for Your OSR-Style Campaign World</h1>
         </header>
+
+        <select onChange={ this.updatePopCount }>
+          <option value="50">Fifty Hirelings</option>
+          <option value="25">Twenty-Five Hirelings</option>
+          <option value="10">Ten Hirelings</option>
+          <option value="5">Five Hirelings</option>
+        </select>
+
+        <button onClick={ this.repopRetainers }>
+          Get a New Batch of Hirelings
+        </button>
+
         <p className="App-intro">
           <a href="#rolls">The Rolls</a> list the basic index of the generated hirelings. For more details on each individual,
           check their <a href="#cv">curriculum vitae</a> below.

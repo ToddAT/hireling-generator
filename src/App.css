@@ -5,8 +5,10 @@
 }
 
 .App-header {
-  background-color: hsla(350, 84%, 40%, 1.0);
+  box-sizing: content-box;
+  width: 100%;
   padding: 20px;
+  background-color: hsla(350, 84%, 40%, 1.0);
   color: white;
 }
 

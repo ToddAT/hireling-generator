@@ -11,8 +11,7 @@ class RetainerSummaryList extends Component {
   render() {
   	const retainerListItems = this.props.population.map((r, i) =>
       <li className="retainer-summary-list--item" key={ i }>
-        <strong className="retainer-summary-list--item__name">{ r.name }</strong>
-        the <em className="retainer-summary-list--item__occupation">{ r.occupation.Name }</em>
+        <strong className="retainer-summary-list--item__name">{ r.name }</strong> the <em className="retainer-summary-list--item__occupation">{ r.occupation.Name }</em>
       </li>
     );
 
