@@ -1,0 +1,52 @@
+.retainer-matrix {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	text-align: center;
+}
+	.retainer-matrix__item {
+		display: inline-block;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+	}
+
+		.retainer-matrix__header {
+			display: block;
+			font-family: 'Permanent Marker', cursive;
+			text-align: center;
+		}
+
+		.retainer-matrix__alignment {
+			display: block;
+			position: absolute;
+			bottom: 5px;
+			right: 5px;
+			font-family: 'Permanent Marker', cursive;
+			text-align: center;
+			opacity: 0.5;
+			transform: rotate(-15deg);
+		}
+
+			.retainer-matrix__alignment--lawful {
+				color: #00ff;
+			}
+
+			.retainer-matrix__alignment---chaotic {
+				color: hsla(350, 84%, 40%, 1.0);
+			}
+
+		.retainer-matrix__gear-list {
+			margin: 0;
+			line-height: 1;
+			font-family: 'Gaegu', cursive;
+		}
+
+			.retainer-matrix__gear-list__header {
+				display: block;
+				margin: 0;
+				font-family: 'Permanent Marker', cursive;
+				text-align: center;
+				text-transform: uppercase;
+			}

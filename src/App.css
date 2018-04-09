@@ -26,6 +26,12 @@
   margin: 0 5rem;
 }
 
+.section-header {
+  margin: 1rem 0 .5rem 0;
+  font-size: xx-large;
+  font-family: 'Chicle', cursive;
+}
+
 .App-footer {
   font-family: 'Chicle', cursive;
   color: #444;

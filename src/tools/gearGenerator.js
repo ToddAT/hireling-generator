@@ -205,3 +205,13 @@ export const getGear = (occ) => {
 
 	return gearSet.join(', ');
 };
+
+export const generateGear = (occupation) => {
+	if(!occupation.Gear) {
+		return '';
+	}
+
+	var gearSet = getRandomEntry(occupation.Gear, GEAR);
+
+	return gearSet.join(', ');
+};
