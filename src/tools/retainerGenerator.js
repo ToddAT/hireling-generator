@@ -41,6 +41,7 @@ export const generateRetainers = (count = 1) => {
       'armor': getArmor(occupation),
       'weapon': getWeapon(occupation),
       'gear': generateGear(occupation),
+      'alignment': generateAlignment(),
       'attributes': {
         'str': d6(3),
         'int': d6(3),
