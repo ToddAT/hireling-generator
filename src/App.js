@@ -13,6 +13,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.copyToClipboard = this.copyToClipboard.bind(this);
     this.updatePopCount = this.updatePopCount.bind(this);
     this.repopRetainers = this.repopRetainers.bind(this);
 
@@ -22,8 +23,19 @@ class App extends Component {
     };
   }
 
+  copyToClipboard(e) {
+    e.preventDefault();
+
+    let textArea = document.getElementById('retainersPlainText');
+    textArea.select();
+     
+    document.execCommand('copy');
+  }
+
   updatePopCount(e) {
+    e.preventDefault();
     this.setState({'count': e.target.value});
+    this.repopRetainers(e);
   }
 
   repopRetainers(e) {
@@ -32,6 +44,15 @@ class App extends Component {
   }
 
   render() {
+    const retainersPlainText = () => {
+      let txt = '';
+
+      this.state.retainers.map((r) =>
+        txt += r.name + ' the ' + r.occupation.Name + '\r\n'
+      );
+
+      return txt;
+    };
 
     return (
       <div className="App">
@@ -50,6 +71,10 @@ class App extends Component {
           Get a New Batch of Hirelings
         </button>
 
+        <button onClick={ this.copyToClipboard }>
+          Copy These Hirelings to Clipboard
+        </button>
+
         <p className="App-intro">
           <a href="#rolls">The Rolls</a> list the basic index of the generated hirelings. For more details on each individual,
           check their <a href="#cv">curriculum vitae</a> below.
@@ -57,6 +82,10 @@ class App extends Component {
         <div className="content-wrapper">
           <header className="section-header" id="rolls">The Rolls</header>
           <RetainerSummaryList population={ this.state.retainers } />
+
+          <textarea id="retainersPlainText">
+            { retainersPlainText() }
+          </textarea>
 
           <header className="section-header" id="cv">Curriculum Vitae</header>
           <RetainerMatrix population={ this.state.retainers } />
