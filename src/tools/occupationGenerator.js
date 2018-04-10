@@ -39,7 +39,7 @@ export const generateOccupation = (occupations = OCCUPATIONS.ALL) => {
       case 'merc':
         occupation = getRandomOccupation(MERCS);
         break;
-      case 'henchmen':
+      case 'henchman':
         occupation = getRandomOccupation(HENCHMEN);
         break;
       case 'craft':
