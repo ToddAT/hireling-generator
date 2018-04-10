@@ -24,6 +24,7 @@ font-family: 'Gaegu', cursive;
 }
 
 	.retainer-list-item {
+		padding-right: 1rem;
 		cursor: pointer;
 	}
 

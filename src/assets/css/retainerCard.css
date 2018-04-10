@@ -35,6 +35,7 @@
 		display: block;
 		margin: 0;
 		font-family: 'Permanent Marker', cursive;
+		line-height: 1;
 		text-align: center;
 		text-transform: uppercase;
 	}

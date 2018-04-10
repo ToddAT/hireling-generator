@@ -10,10 +10,18 @@ font-family: 'Gaegu', cursive;
 
 .attribute-table__head__head-cell {
   margin: 0;
-  padding: 0 1px;
+  padding: 0 3px;
   font-family: 'Permanent Marker', cursive;
   line-height: 1;
 }
+
+  .attribute-table__head__head-cell:first-child {
+    margin-left: 0;
+  }
+
+  .attribute-table__head__head-cell:last-child {
+    margin-right: 0;
+  }
 
 .attribute-table__body__cell {
   margin: 0;
