@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu|Permanent+Marker');
+
+.retainer-card__header {
+	display: block;
+	font-family: 'Permanent Marker', cursive;
+	text-align: center;
+}
+
+.retainer-card__alignment {
+	display: block;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	font-family: 'Permanent Marker', cursive;
+	text-align: center;
+	opacity: 0.5;
+	transform: rotate(-15deg);
+}
+
+	.retainer-card__alignment--lawful {
+		color: #00ff;
+	}
+
+	.retainer-card__alignment---chaotic {
+		color: hsla(350, 84%, 40%, 1.0);
+	}
+
+.retainer-card__gear-list {
+	margin: 0;
+	line-height: 1;
+	font-family: 'Gaegu', cursive;
+}
+
+	.retainer-card__gear-list__header {
+		display: block;
+		margin: 0;
+		font-family: 'Permanent Marker', cursive;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+.retainer-card--large {
+	font-size: xx-large;
+}
+	.retainer-card--large .retainer-card__header {
+		margin-bottom: 1rem;
+	}
+
+	.retainer-card--large .attribute-table {
+		min-width: 90%;
+	}
+
+@media only screen and (max-width: 480px) {
+	.retainer-card--large {
+		font-size: large;
+	}
+
+	.retainer-card__header {
+		font-size: small;
+	}
+
+	.retainer-card__gear-list {
+		font-size: smaller;
+	}
+}

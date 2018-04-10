@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { ButtonToolbar, ButtonGroup, DropdownButton, MenuItem, Button, Form, FormGroup, FormControl, Col, ControlLabel } from 'react-bootstrap';
+import ModalBox from './components/ui/ModalBox';
 
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 import './App.css';
 
 import RetainerSummaryList from './components/ui/retainerList';
-import RetainerMatrix from './components/ui/retainerMatrix';
+import RetainerCarousel from './components/ui/retainerCarousel';
 
 import { generateRetainers } from './tools/retainerGenerator';
+import { exportPlainTextSimple, exportPlainTextDetails } from './tools/plainTextGenerator';
 
 class App extends Component {
   constructor(props) {
@@ -16,9 +21,15 @@ class App extends Component {
     this.copyToClipboard = this.copyToClipboard.bind(this);
     this.updatePopCount = this.updatePopCount.bind(this);
     this.repopRetainers = this.repopRetainers.bind(this);
+    this.handleShowModal = this.handleShowModal.bind(this);
+    this.handleHideModal = this.handleHideModal.bind(this);
+    this.handleModalContent = this.handleModalContent.bind(this);
+    this.copyModalContent = this.copyModalContent.bind(this);
 
     this.state = {
       'count': props.count,
+      'showModal': false,
+      'modalTitle': 'Export These Hirelings!',
       'retainers': generateRetainers(props.count),
     };
   }
@@ -27,6 +38,7 @@ class App extends Component {
     e.preventDefault();
 
     let textArea = document.getElementById('retainersPlainText');
+    textArea.value = this.retainersPlainText();
     textArea.select();
      
     document.execCommand('copy');
@@ -34,25 +46,67 @@ class App extends Component {
 
   updatePopCount(e) {
     e.preventDefault();
-    this.setState({'count': e.target.value});
-    this.repopRetainers(e);
+    this.setState({'count': parseInt(e.target.getAttribute('data-key'))});
+    this.repopRetainers(e, parseInt(e.target.getAttribute('data-key')));
   }
 
-  repopRetainers(e) {
+  repopRetainers(e, count = this.state.count) {
     e.preventDefault();
-    this.setState({'retainers': generateRetainers(this.state.count)});
+    this.setState({'retainers': generateRetainers(count)});
+  }
+
+  handleShowModal(e) {
+    e.preventDefault();
+
+    this.setState({ 'showModal': true });
+    return false;
+  }
+
+  handleModalContent() {
+    let content = (
+      <textarea id="retainersPlainText" className="retainer-export-text">
+        { this.retainersPlainText() }
+      </textarea>
+    ), textArea;
+
+    ReactDOM.render(content, document.getElementById('modalBoxContent'));
+  }
+
+  copyModalContent() {
+    let textArea = document.getElementById('retainersPlainText'),
+        message = document.createElement('p');
+    textArea.select();
+
+    message.className = 'modal-body__message';
+     
+    if(document.execCommand('copy')) {
+      message.className += ' modal-body__message--success';
+      message.innerText = 'Hirelings copied to your clipboard!';
+    } else {
+      message.className += ' modal-body__message--failure';
+      message.innerText = 'Use CTRL+C/Command+C to copy the hirelings to your clipboard.';
+    }
+
+    textArea.parentNode.appendChild(message);
+  }
+
+  handleHideModal() {
+    this.setState({ showModal: false });
+    return false;
+  }
+
+  retainersPlainText() {
+    let txtList = '', txtDetails = '';
+
+    this.state.retainers.map((r) => {
+      txtList += exportPlainTextSimple(r) + '\r\n';
+      txtDetails += exportPlainTextDetails(r)  + '\r\n\r\n';
+    });
+
+    return txtList + '\r\n---\r\n\r\n' + txtDetails;
   }
 
   render() {
-    const retainersPlainText = () => {
-      let txt = '';
-
-      this.state.retainers.map((r) =>
-        txt += r.name + ' the ' + r.occupation.Name + '\r\n'
-      );
-
-      return txt;
-    };
 
     return (
       <div className="App">
@@ -60,35 +114,32 @@ class App extends Component {
           <h1 className="App-title">Fifty Random Hirelings for Your OSR-Style Campaign World</h1>
         </header>
 
-        <select onChange={ this.updatePopCount }>
-          <option value="50">Fifty Hirelings</option>
-          <option value="25">Twenty-Five Hirelings</option>
-          <option value="10">Ten Hirelings</option>
-          <option value="5">Five Hirelings</option>
-        </select>
+        <ButtonToolbar>
+          <ButtonGroup>
+            <DropdownButton title="Recruit More Hirelings">
+              <MenuItem eventKey="1" data-key="50" onClick={ this.updatePopCount }>Fifty</MenuItem>
+              <MenuItem eventKey="2" data-key="25" onClick={ this.updatePopCount }>Twenty-Five</MenuItem>
+              <MenuItem eventKey="3" data-key="10" onClick={ this.updatePopCount }>Ten</MenuItem>
+              <MenuItem eventKey="4" data-key="5" onClick={ this.updatePopCount }>Five</MenuItem>
+            </DropdownButton>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button onClick={ this.handleShowModal }>
+              Copy These Hirelings to Clipboard
+            </Button>
+          </ButtonGroup>
+        </ButtonToolbar>
 
-        <button onClick={ this.repopRetainers }>
-          Get a New Batch of Hirelings
-        </button>
-
-        <button onClick={ this.copyToClipboard }>
-          Copy These Hirelings to Clipboard
-        </button>
-
-        <p className="App-intro">
-          <a href="#rolls">The Rolls</a> list the basic index of the generated hirelings. For more details on each individual,
-          check their <a href="#cv">curriculum vitae</a> below.
-        </p>
         <div className="content-wrapper">
-          <header className="section-header" id="rolls">The Rolls</header>
           <RetainerSummaryList population={ this.state.retainers } />
 
-          <textarea id="retainersPlainText">
-            { retainersPlainText() }
-          </textarea>
-
-          <header className="section-header" id="cv">Curriculum Vitae</header>
-          <RetainerMatrix population={ this.state.retainers } />
+          <ModalBox 
+            title={ this.state.modalTitle }
+            show={ this.state.showModal }
+            onHide={ this.handleHideModal }
+            onEnter={ this.handleModalContent }
+            onEntered={ this.copyModalContent }
+          />
         </div>
         <footer className="App-footer">
           <p>

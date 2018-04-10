@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Chicle|Gaegu|Permanent+Marker');
+
+.modal {}
+
+	.modal-header {
+		padding: 5px 5px 0 5px !important;
+		border: 0 !important;
+	}
+
+		.modal-header__title {
+			text-align: center;
+			font-family: 'Chicle', cursive;
+			color: hsla(350, 84%, 40%, 1.0);
+		}
+
+		.modal-body__message {
+			font-family: 'Permanent Marker', cursive;
+			font-size: x-large;
+		}
+
+@media only screen and (max-width: 768px) {
+	.modal-body__message {
+		font-size: large;
+	}
+}

@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Chicle');
+@import url('https://fonts.googleapis.com/css?family=Chicle|Gaegu|Permanent+Marker');
+
+button {
+  font-family: 'Permanent Marker', cursive;
+}
 
 .App {
   text-align: center;
@@ -6,7 +10,6 @@
 
 .App-header {
   box-sizing: content-box;
-  width: 100%;
   padding: 20px;
   background-color: hsla(350, 84%, 40%, 1.0);
   color: white;
@@ -24,15 +27,28 @@
   color: #444;
 }
 
+.btn-toolbar {
+  margin: 10px 0;
+  font-family: 'Permanent Marker', cursive;
+}
+  .btn-toolbar .btn-group {
+    float: none;
+  }
+
 .content-wrapper {
   margin: 0 5rem;
 }
 
-.section-header {
-  margin: 1rem 0 .5rem 0;
-  font-size: xx-large;
-  font-family: 'Chicle', cursive;
-}
+  .section-header {
+    margin: 1rem 0 .5rem 0;
+    font-size: xx-large;
+    font-family: 'Chicle', cursive;
+  }
+
+  .retainer-export-text {
+    width: 100%;
+    height: 200px;
+  }
 
 .App-footer {
   font-family: 'Chicle', cursive;
@@ -45,6 +61,14 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .btn-toolbar > .btn-group {
+    margin-left: 0;
+  }
+
+  .btn-group:first-child {
+    margin-bottom: .5rem;
+  }
+
   .content-wrapper {
     margin: 0 2rem;
   }

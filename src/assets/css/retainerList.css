@@ -1,18 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Gaegu|Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Chicle|Gaegu|Permanent+Marker');
 /*
 font-family: 'Permanent Marker', cursive;
 font-family: 'Gaegu', cursive;
 */
 
+.retainer-summary__header {
+	margin: 1rem 0 .5rem 0;
+    font-size: xx-large;
+    font-family: 'Chicle', cursive;
+}
+
+.retainer-summary__intro {
+	margin: 0 1rem;
+	font-size: large;
+	font-family: 'Chicle', cursive;
+	color: #444;
+}
+
 .retainer-summary-list {
-	column-width: 18rem;
+	column-width: 20rem;
 	font-size: large;
 	font-family: 'Gaegu', cursive;
 }
 
+	.retainer-list-item {
+		cursor: pointer;
+	}
+
 @media only screen and (max-width: 480px) {
 	.retainer-summary-list {
 		font-size: large;
+	}
+
+	.retainer-summary__intro {
+	    font-size: medium;
 	}
 }
 

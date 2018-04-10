@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu|Permanent+Marker');
+
 .retainer-matrix {
 	width: 100%;
 	margin: 0;
@@ -7,46 +9,20 @@
 }
 	.retainer-matrix__item {
 		display: inline-block;
+		width: 30%;
+		margin: 0 2%;
+		margin-top: 20px;
 		padding: 0;
 		list-style: none;
 		text-align: center;
 	}
 
-		.retainer-matrix__header {
-			display: block;
-			font-family: 'Permanent Marker', cursive;
-			text-align: center;
+		.retainer-matrix__item:first-child {
+			margin-left: 0;
+			margin-right: 3%;
 		}
 
-		.retainer-matrix__alignment {
-			display: block;
-			position: absolute;
-			bottom: 5px;
-			right: 5px;
-			font-family: 'Permanent Marker', cursive;
-			text-align: center;
-			opacity: 0.5;
-			transform: rotate(-15deg);
+		.retainer-matrix__item:last-child {
+			margin-left: 3%;
+			margin-right: 0;
 		}
-
-			.retainer-matrix__alignment--lawful {
-				color: #00ff;
-			}
-
-			.retainer-matrix__alignment---chaotic {
-				color: hsla(350, 84%, 40%, 1.0);
-			}
-
-		.retainer-matrix__gear-list {
-			margin: 0;
-			line-height: 1;
-			font-family: 'Gaegu', cursive;
-		}
-
-			.retainer-matrix__gear-list__header {
-				display: block;
-				margin: 0;
-				font-family: 'Permanent Marker', cursive;
-				text-align: center;
-				text-transform: uppercase;
-			}

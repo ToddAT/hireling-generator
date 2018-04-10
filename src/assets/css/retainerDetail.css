@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Chicle|Gaegu|Permanent+Marker');
+
+.retainer-details__card {
+	display: block;
+}
+
+.retainer-export__text {
+	width: 100%;
+	min-height: 150px;
+}
+
+.retainer-export__info {
+	font-family: 'Gaegu', cursive;
+	font-size: large;
+}
+
+.retainer-details__button {
+	margin-top: 1rem;
+	text-align: center;
+}
+
+.retainer-details__button button {
+	font-family: 'Permanent Marker', cursive;
+	font-size: large;
+}
+
+@media only screen and (max-width: 480px) {
+	.retainer-export__info {
+		font-size: medium;
+	}
+}
