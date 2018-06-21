@@ -1,0 +1,262 @@
+;Start
+1,[birth-start]; is [humor], [quality] {job}, [tendency] [hobby], and has [quirk]
+
+;Humor
+1,[mod] [sanguine]
+1,[mod] [choleric]
+1,[mod] [melancholic]
+1,[mod] [phlegmatic]
+
+;Sanguine
+1,jolly
+1,cheerful
+1,hot-blooded
+1,lustful
+
+;Choleric
+1,hot-tempered
+1,angry
+1,violent
+1,proud
+
+;Melancholic
+1,sad
+1,depressed
+1,grumpy
+
+;Phlegmatic
+1,lazy
+1,slothful
+1,irresponsible
+
+;Mod
+1,slightly
+1,mildly
+1,very
+1,extremely
+
+;Quality
+1,a poor
+1,an excellent
+1,a mediocre
+1,an average
+1,an above-average
+
+;Tendency
+1,loves to
+1,likes to
+1,hates to
+
+;Hobby
+1,eat
+1,sleep
+1,carouse
+1,travel
+1,work
+1,drink
+
+;Quirk
+1,[taste] [object]
+
+;Strength
+1,a slight
+1,a mild
+1,a significant
+1,a strong
+1,an extreme
+
+;Taste
+1,[strength] fascination with
+1,[strength] obsession with
+1,[strength] repulsion towards
+1,[strength] dislike of
+1,a hatred of
+1,[strength] fear of
+
+;Object
+1,[people]
+1,[thing]
+1,[animal]
+1,[meta]
+
+;People
+1,men
+1,women
+1,the elderly
+1,the dead
+
+;Thing
+1,blades
+1,iron
+1,stone
+1,bronze
+1,statues
+1,jewelry
+1,rings
+1,books
+
+;Animal
+1,cats
+1,dogs
+1,mice
+1,rats
+1,birds
+1,insects
+1,spiders
+1,goblins
+1,giants
+1,fae
+1,halflings
+1,elementals
+
+;Meta
+1,death
+1,undeath
+1,demons
+1,dragons
+1,law
+1,chaos
+1,magic
+1,the underworld
+1,the wilderness
+1,blood
+1,authority
+1,the sea
+1,the earth
+1,mountains
+1,valleys
+1,bogs
+1,tombs
+1,graveyards
+1,temples
+1,inns
+1,battle
+
+;Birth-Start
+1,is [8+8d6] years old, born in the [birth-season], under the sign of the [birth-sign]
+
+;Birth-Season
+1,winter
+1,spring
+1,summer
+1,fall
+
+;Birth-Season Type
+1,
+1,of plenty
+1,of famine
+1,of storms
+1,of war
+1,of peace
+
+;Birth-Sign
+1,[birth-element] (aspect of [birth-domain])
+
+;Honorific
+1,Terrible
+1,Wise
+1,Mighty
+1,Great
+1,Silent
+1,Blind
+1,Chained
+1,Drowned
+
+
+;Birth-Element
+1,[Water-Element]
+1,[Fire-Element]
+1,[Earth-Element]
+1,[Air-Element]
+1,[Metal-Element]
+1,[Wood-Element]
+
+;Water-Element
+1,[honorific] [Birth-avatar] of the [Color] Deep
+1,[honorific] [Birth-avatar] of the [Color] Ocean
+1,[honorific] Sea-[Birth-avatar]
+1,[honorific] Water-[Birth-avatar]
+
+;Fire-Element
+1,[honorific] Infernal [birth-avatar]
+1,[honorific] Flame [birth-avatar]
+1,[honorific] [birth-avatar] of the [Color] Flame
+1,[honorific] Fire-[Birth-avatar]
+
+;Earth-Element
+1,[honorific] [birth-avatar] of the [Color] Mountain
+1,[honorific] Stone [birth-avatar]
+
+;Air-Element
+1,[honorific] [birth-avatar] of the Sky
+1,[honorific] [birth-avatar] of the Endless Expanse
+1,[honorific] [birth-avatar] of the [Color] Dawn
+1,[honorific] [birth-avatar] of the Endless Dusk
+
+;Metal-Element
+1,[honorific] [birth-avatar] of the Forge
+1,[honorific] Steel [birth-avatar]
+1,[honorific] Iron [birth-avatar]
+1,[honorific] Bronze [birth-avatar]
+
+;Wood-Element
+1,[honorific] [birth-avatar] of the Forest
+
+;Birth-Avatar
+1,Rat
+1,Ox
+1,Tiger
+1,Rabbit
+1,Dragon
+1,Snake
+1,Horse
+1,Goat
+1,Monkey
+1,Rooster
+1,Dog
+1,Pig
+1,Goblin
+1,Giant
+1,Crone
+1,Spider
+1,Serpent
+1,Spider
+1,Lord
+1,Lady
+1,King
+1,Queen
+1,Prince
+1,Duke
+1,Baron
+1,Knight
+1,Knave
+1,Cow
+1,Bull
+1,Crab
+1,Ram
+1,Maw
+
+;Birth-Domain
+1,Life
+1,Death
+1,Harvest
+1,War
+1,Trade
+1,Fertility
+1,Wisdom
+1,Knowledge
+1,Pleasure
+1,Day
+1,Night
+
+;Color
+1,Red
+1,Blue
+1,Yellow
+1,Green
+1,Black
+1,Gray
+1,Ebon
+1,Ruby
+1,Emerald
+1,Ochre

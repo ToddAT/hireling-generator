@@ -14,6 +14,8 @@ import RetainerCarousel from './components/ui/retainerCarousel';
 import { generateRetainers } from './tools/retainerGenerator';
 import { exportPlainTextSimple, exportPlainTextDetails } from './tools/plainTextGenerator';
 
+import { generateRandomTableEntry } from './tools/tableParser';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -107,6 +109,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('test', generateRandomTableEntry('hirelings.start'));
 
     return (
       <div className="App">

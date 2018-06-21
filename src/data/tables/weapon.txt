@@ -1,0 +1,111 @@
+;Simple
+1,a dagger
+1,a knife
+1,a club
+1,a quarterstaff
+1,a short spear
+1,a short sword
+1,a dirk
+1,a machete
+1,a sap
+1,a cleaver
+
+;Secondary
+1,a dagger
+1,a knife
+1,a short sword
+
+;Melee
+1,[sword]
+1,[axe]
+1,[polearm]
+1,[two-hander]
+1,a mace
+1,a warhammer
+
+;Missile
+1,a dagger
+1,a hand axe
+1,[bow]
+1,[crossbow]
+1,a javelin
+
+;Crossbow
+1,a light crossbow
+1,a heavy crossbow
+
+;Bow
+1,a short bow
+1,a longbow
+
+;Spear
+1,a boar spear
+1,a mancatcher
+1,a trident
+1,a military fork
+
+;Magician
+1,a dagger
+1,a staff
+1,a wand
+
+;Blunt
+1,a mace
+1,a warhammer
+1,a club
+
+;Great Blunt
+1,a maul
+1,a two-handed mace
+1,a great club
+
+;Sword
+1,a rapier
+1,a scimitar
+1,a cutlass
+1,a scramasax
+1,a longsword
+1,an arming sword
+1,a falchion
+1,a flamberge
+1,a spatha
+1,a machete
+
+;One-Hander
+1,[sword]
+1,[axe]
+
+;Two-Hander
+1,a great sword
+1,a bastard sword
+1,a two-handed sword
+1,a claymore
+1,a maul
+
+;Axe
+1,a hand axe
+1,a battle axe
+
+;Great Axe
+1,a great axe
+
+;Polearm
+1,a pike
+1,a ranseur
+1,a glaive
+1,a pole axe
+1,a guisarme
+1,a spetum
+1,a partisan
+1,a fauchard
+1,a voulge
+1,a bec de corbin
+1,a lucern hammer
+1,a bardiche
+1,a military fork
+
+;Shield
+1,a buckler
+1,a wooden shield
+1,a steel shield
+

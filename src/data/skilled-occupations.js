@@ -103,7 +103,7 @@ exports.ALL = [
     "Gear": "sea|misc,strange",
   },
   {
-    "Name": "Captain (Sailor)",
+    "Name": "Sea Captain",
     "Daily Wage": "",
     "Monthly Wage": "",
     "Monthly Live-In Wage": "$250.00",
@@ -114,7 +114,7 @@ exports.ALL = [
     "Gear": "sea|misc",
   },
   {
-    "Name": "Navigator (Sailor)",
+    "Name": "Ship Navigator",
     "Daily Wage": "",
     "Monthly Wage": "",
     "Monthly Live-In Wage": "$100.00",

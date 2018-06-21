@@ -6,6 +6,8 @@ import { getArmor } from './armorGenerator.js';
 import { getWeapon } from './weaponGenerator.js';
 import { generateGear } from './gearGenerator.js';
 
+import { generateRandomTableEntry } from './tableParser';
+
 const generateAlignment = () => {
   var rnd = d6(1);
 
@@ -31,17 +33,28 @@ export const generateRetainers = (count = 1) => {
   for(i=0; i<count; i++) {
     let gender = tossCoin() ? 'male' : 'female',
         occupation = generateOccupation(),
-        retainer;
+        name = generateName(gender),
+        clothes = getClothes(occupation.Wealth),
+        armor = getArmor(occupation),
+        weapon = getWeapon(occupation),
+        gear = generateGear(occupation),
+        alignment = generateAlignment(),
+        personality = generateRandomTableEntry('personality.start', {
+          'meta': {
+            'name': name,
+            'job': (occupation.ShortName ? occupation.ShortName : occupation.Name).toLowerCase(),
+          }
+        }), retainer;
 
     retainer = {
       'gender': gender,
-      'name': generateName(gender),
+      'name': name,
       'occupation': occupation,
-      'clothes': getClothes(occupation.Wealth),
-      'armor': getArmor(occupation),
-      'weapon': getWeapon(occupation),
-      'gear': generateGear(occupation),
-      'alignment': generateAlignment(),
+      'clothes': clothes,
+      'armor': armor,
+      'weapon': weapon,
+      'gear': gear,
+      'alignment': alignment,
       'attributes': {
         'str': d6(3),
         'int': d6(3),
@@ -50,7 +63,8 @@ export const generateRetainers = (count = 1) => {
         'con': d6(3),
         'cha': d6(3),
         'hp': d6(1),
-      }
+      },
+      'personality': (gender === 'male' ? 'He' : 'She') + ' ' + personality.description + '.',
     };
 
     retainers.push(retainer);

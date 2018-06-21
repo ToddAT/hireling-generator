@@ -1,0 +1,26 @@
+;Civilian
+4, carrying [Weapon.Simple] and [Gear.Misc]
+1, carrying [Weapon.Simple] and [Gear.Strange]
+1, carrying [Weapon.Simple], [Gear.Misc], and [Gear.Strange]
+
+;Military
+1,equipped with [Weapon.One-Hander] and [Weapon.Secondary]
+1,equipped with [Weapon.Missile] and [Weapon.Secondary]
+1,equipped with [Weapon.Two-Hander] and [Weapon.Secondary]
+1,equipped with [Weapon.One-Hander], [Weapon.Secondary], and [Weapon.Shield]
+
+;Missile
+1,with [Weapon.Missile] and [Weapon.Secondary]
+
+;Bow
+1,shouldering [Weapon.Bow] and carrying [Weapon.Secondary]
+
+;Crossbow
+1,shouldering [Weapon.Crossbow] and carrying [Weapon.Secondary]
+
+;Cleric
+1,[Weapon.Blunt] and [Weapon.Shield]
+1,[Weapon.Great Blunt]
+
+;Magician
+1,carrying [Weapon.Magician], [Gear.Magician], [Gear.Strange]

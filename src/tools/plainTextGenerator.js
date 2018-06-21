@@ -25,7 +25,8 @@ export const exportPlainTextDetails = (r) => {
       'Gear: ' + r.clothes +
       ( r.armor !== '' ? ', ' + r.armor : ''  ) +
       ( r.weapon !== '' ? ', ' + r.weapon : ''  ) +
-      ( r.gear !== '' ? ', ' + r.gear : ''  );
+      ( r.gear !== '' ? ', ' + r.gear : ''  )  + '\r\n' +
+      ( r.personality !== '' ? r.personality : ''  );
   } catch(e) {
     return '';
   }

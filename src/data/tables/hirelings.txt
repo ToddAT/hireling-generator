@@ -1,0 +1,80 @@
+;Start
+1,{name:[Name.Start]} the {age:[8d6+6]} year old [job], [Personality.Start]
+
+;Job
+4,[unskilled]
+3,[skilled]
+2,[specialist]
+1,[retainer]
+
+;Unskilled
+1,{job:guard}, [Kit.Civilian]
+1,{job:laborer}, [Kit.Civilian]
+1,{job:linkboy}, [Kit.Civilian]
+1,{job:servant}, [Kit.Civilian]
+1,{job:slave}, [Kit.Civilian]
+1,{job:oarsman}, [Kit.Civilian]
+
+;Skilled
+1,{job:accountant}, [Kit.Civilian]
+1,{job:animal handler}, [Kit.Civilian]
+1,{job:armorer}, [Kit.Civilian]
+1,{job:butler}, [Kit.Civilian]
+1,{job:coachman}, [Kit.Civilian]
+1,[craftsman]
+1,{job:guide}, [Kit.Civilian]
+1,[mercenary]
+1,[sailor]
+1,{job:slave master}, [Kit.Civilian]
+1,{job:teamster}, [Kit.Civilian]
+
+;Craftsman
+1,{job:carpenter}, [Kit.Civilian]
+1,{job:tailor}, [Kit.Civilian]
+1,{job:stonemason}, [Kit.Civilian]
+1,{job:caretaker}, [Kit.Civilian]
+
+;Mercenary
+1,{job:archer}, [Kit.Bow]
+1,{job:crossbowman}, [Kit.Crossbow]
+1,{job:horseman}, [Kit.Military]
+1,{job:cavalier}, [Kit.Military]
+1,{job:man-at-arms}, [Kit.Military]
+1,{job:axeman}, [Kit.Civilian]
+1,{job:spearman}, [Kit.Civilian]
+1,{job:pikeman}, [Kit.Civilian]
+
+;Sailor
+3,{job:sailor}, [Kit.Civilian]
+2,{job:navigator}, [Kit.Civilian]
+1,{job:captain}, [Kit.Civilian]
+
+;Specialist
+1,{job:alchemist}, [Kit.Civilian]
+2,{job:physician}, [Kit.Civilian]
+2,{job:scholar}, [Kit.Civilian]
+1,{job:spy}, [Kit.Civilian]
+
+;Retainer
+1,[cleric]
+1,[fighter]
+1,[magic-user]
+1,[special]
+
+;Cleric
+3,{job:acolyte}, [Kit.Cleric]
+2,{job:adept}, [Kit.Cleric]
+1,{job:priest}, [Kit.Cleric]
+
+;Fighter
+3,{job:veteran}, [Kit.Military]
+2,{job:warrior}, [Kit.Military]
+1,{job:swordmaster}, [Kit.Military]
+
+;Magic-User
+3,{job:medium}, [Kit.Magician]
+2,{job:seer}, [Kit.Magician]
+1,{job:conjurer}, [Kit.Magician]
+
+;Special
+1,{job:specialist}, [Kit.Specialist]
