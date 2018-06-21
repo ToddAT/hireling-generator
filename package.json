@@ -58,7 +58,8 @@
   },
   "homepage": "https://ToddAT.github.io/",
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.1.0",
+    "raw-loader": "^0.5.1"
   },
   "jest": {
     "collectCoverageFrom": [
