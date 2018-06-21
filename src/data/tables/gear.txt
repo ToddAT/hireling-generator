@@ -1,0 +1,113 @@
+;wilderness
+1,a hunting knife
+1,a shovel
+1,a fishing line and hook
+1,an iron pot
+1,a waterskin
+1,a tent
+1,a flint and steel
+1,a bedroll
+
+;adventure
+1,a backpack
+1,a flask of oil
+1,a coil of rope
+1,a lantern
+1,a ten-foot pole
+1,a crowbar
+1,a stick of chalk
+
+;military
+1,a whetstone
+1,a signal whistle
+1,a pouch of caltrops
+
+;scholar
+1,a candle
+1,a pen and ink
+1,a roll of parchment
+1,some sealing wax
+1,a bar of soap
+1,a signet ring
+1,a mirror
+1,a bell
+1,a textbook
+1,a manuscript
+1,a vial of liquid
+1,a box of powder
+
+;cleric
+1,a holy symbol
+1,a holy water
+
+;mercantile
+1,a scale
+1,an hourglass
+
+;craft
+1,a hammer
+1,a mallet
+1,a plumb bob
+1,a chisel
+1,some sandpaper
+1,a leather strip
+1,a length of string
+1,a ball of wax
+
+;magician
+1,a spellbook
+1,a scroll
+1,a potion
+
+;medical
+1,a herbal poultice
+1,a bag of leeches
+1,an arrow puller
+1,an anatomy chart
+1,a medical textbook
+
+;misc
+1,a flask of ale
+1,a lucky charm
+1,a rolled up blanket
+1,a wineskin
+1,an iron key
+1,a ring of keys
+
+;strange
+1,a cockroach
+1,a moth
+1,a honeycomb
+1,a feather
+1,a scrap of preserved flesh
+1,a fragment of coded cypher
+1,a cult symbol
+1,a demonic symbol
+1,a draconic symbol
+1,an extra-planar symbol
+1,an abstract sketch
+1,a vial of blood
+1,an animal bone
+1,a rodent skull
+1,a rabbit\'s foot
+1,a lump of metal
+1,an extracted tooth
+
+;sea
+1,a compass
+1,a sextant
+1,a coastal map
+1,a brick of hard tack
+
+;mount
+1,a bit and bridle
+1,a saddle
+1,a saddlebag
+
+;mount-light
+1,a riding horse
+1,a draft house
+
+;mount-heavy
+1,a light war horse
+1,a heavy war horse

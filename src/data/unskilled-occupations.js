@@ -35,7 +35,7 @@ exports.ALL = [
     "Gear": "adventure",
   },
   {
-    "Name": "Oarsman (Sailor)",
+    "Name": "Ship Oarsman",
     "Daily Wage": "",
     "Monthly Wage": "",
     "Monthly Live-In Wage": "$30.00",

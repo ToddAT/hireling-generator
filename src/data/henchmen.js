@@ -1,6 +1,7 @@
 exports.ALL = [
   {
     "Name": "Acolyte (Cleric)",
+    "ShortName": "Cleric",
     "Daily Wage": "",
     "Monthly Wage": "",
     "Monthly Live-In Wage": "",
@@ -14,6 +15,7 @@ exports.ALL = [
   },
   {
     "Name": "Veteran (Fighter)",
+    "ShortName": "Fighter",
     "Daily Wage": "",
     "Monthly Wage": "",
     "Monthly Live-In Wage": "",
@@ -27,6 +29,7 @@ exports.ALL = [
   },
   {
     "Name": "Medium (Magic-User)",
+    "ShortName": "Magic-User",
     "Daily Wage": "",
     "Monthly Wage": "",
     "Monthly Live-In Wage": "",
@@ -39,6 +42,7 @@ exports.ALL = [
   },
   {
     "Name": "Apprentice (Specialist)",
+    "ShortName": "Specialist",
     "Daily Wage": "",
     "Monthly Wage": "",
     "Monthly Live-In Wage": "",

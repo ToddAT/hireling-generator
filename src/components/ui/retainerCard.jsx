@@ -38,6 +38,12 @@ class RetainerCard extends Component {
           { r.weapon !== '' ? ', ' + r.weapon : ''  }
           { r.gear !== '' ? ', ' + r.gear : ''  }
         </p>
+
+        <div className="post-it">
+          <p className="retainer-card__personality">
+            { r.personality }
+          </p>
+        </div>
       </div>
     );
   }

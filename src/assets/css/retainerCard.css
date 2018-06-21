@@ -25,8 +25,9 @@
 		color: hsla(350, 84%, 40%, 1.0);
 	}
 
-.retainer-card__gear-list {
-	margin: 0;
+.retainer-card__gear-list, .retainer-card__personality {
+	margin: .5rem 0;
+	font-size: smaller;
 	line-height: 1;
 	font-family: 'Gaegu', cursive;
 }
@@ -38,6 +39,31 @@
 		line-height: 1;
 		text-align: center;
 		text-transform: uppercase;
+	}
+
+.retainer-card__personality {
+	position: relative;
+	background: linear-gradient(to bottom, #ffff00 0%, #ffff33 60%, #ffffaa 100%);
+	padding: 10px;
+	font-size: 60%;
+	font-style: italic;
+}
+
+.post-it {
+	position: relative;
+	width: 70%;
+	margin-top: 1rem;
+}
+
+	.post-it:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    border-radius: 20%;
+    box-shadow: 0px 0px 10px 5px rgba(50, 50, 50, 0.25);
 	}
 
 .retainer-card--large {

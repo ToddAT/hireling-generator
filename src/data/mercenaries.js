@@ -1,6 +1,6 @@
 exports.ALL = [
   {
-    "Name": "Archer (Mercenary)",
+    "Name": "Archer",
     "Daily Wage": "",
     "Monthly Wage": "$125.00",
     "Monthly Live-In Wage": "$93.75",
@@ -13,7 +13,7 @@ exports.ALL = [
     "Gear": "military|adventure",
   },
   {
-    "Name": "Crossbowman (Mercenary)",
+    "Name": "Crossbowman",
     "Daily Wage": "",
     "Monthly Wage": "$125.00",
     "Monthly Live-In Wage": "$93.75",
@@ -26,7 +26,7 @@ exports.ALL = [
     "Gear": "military|adventure",
   },
   {
-    "Name": "Horseman (Mercenary)",
+    "Name": "Horseman",
     "Daily Wage": "",
     "Monthly Wage": "$200.00",
     "Monthly Live-In Wage": "$150.00",
@@ -39,7 +39,7 @@ exports.ALL = [
     "Gear": "mount|mount-light",
   },
   {
-    "Name": "Cavalier (Mercenary)",
+    "Name": "Cavalier",
     "Daily Wage": "",
     "Monthly Wage": "$200.00",
     "Monthly Live-In Wage": "$150.00",
@@ -52,7 +52,7 @@ exports.ALL = [
     "Gear": "mount|mount-heavy",
   },
   {
-    "Name": "Man-At-Arms (Mercenary)",
+    "Name": "Man-At-Arms",
     "Daily Wage": "",
     "Monthly Wage": "$100.00",
     "Monthly Live-In Wage": "$75.00",
@@ -65,7 +65,7 @@ exports.ALL = [
     "Gear": "military|adventure",
   },
   {
-    "Name": "Axeman (Mercenary)",
+    "Name": "Axeman",
     "Daily Wage": "",
     "Monthly Wage": "$100.00",
     "Monthly Live-In Wage": "$75.00",
@@ -78,7 +78,7 @@ exports.ALL = [
     "Gear": "military|adventure",
   },
   {
-    "Name": "Spearman (Mercenary)",
+    "Name": "Spearman",
     "Daily Wage": "",
     "Monthly Wage": "$150.00",
     "Monthly Live-In Wage": "$112.50",
@@ -91,7 +91,7 @@ exports.ALL = [
     "Gear": "military|adventure",
   },
   {
-    "Name": "Pikeman (Mercenary)",
+    "Name": "Pikeman",
     "Daily Wage": "",
     "Monthly Wage": "$150.00",
     "Monthly Live-In Wage": "$112.50",
