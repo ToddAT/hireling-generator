@@ -89,7 +89,7 @@ const parseDice = (dice) => {
 				rangeDie;
 
 			if(rangeSpread) {
-				console.log('found range...', rangeSpread.min, rangeSpread.max);
+				//console.log('found range...', rangeSpread.min, rangeSpread.max);
 				rangeDie = randomArbitraryDie(rangeSpread.min, rangeSpread.max);
 				sum = rangeDie(1);
 			}
@@ -131,7 +131,7 @@ export const roll = (dice) => {
 	dice = isDiceRoll(dice) ? dice.split(symbols) : [ dice ];
   
 	dice.map((d) => {
-		console.log('found...', d, isDiceRoll(d));
+		//console.log('found...', d, isDiceRoll(d));
 
 		if(!isRange(d) && symbols.test(d)) {
 			operators.push(d);

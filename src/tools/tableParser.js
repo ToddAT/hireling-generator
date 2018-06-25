@@ -56,7 +56,7 @@ const parseTableEntry = (entry, tableID) => {
 
 		if(dice.isDiceOrRange(tableName)) {
 			parsedSubEntry = dice.roll(tableName);
-			console.log('parsing table, found dice entry...', tableName, parsedSubEntry);
+			//console.log('parsing table, found dice entry...', tableName, parsedSubEntry);
 		} else {
 			if(tableName.indexOf('.') < 0) {
 				tableName = tableID + '.' + tableName;

@@ -117,7 +117,7 @@ class App extends Component {
   }
 
   render() {
-    console.log('test', generateRandomTableEntry('hirelings.start'));
+    //console.log('test', generateRandomTableEntry('hirelings.start'));
 
     return (
       <div className="App">
