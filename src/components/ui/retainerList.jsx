@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 import ReactDOM from 'react-dom';
 import ModalBox from './ModalBox';
 import RetainerDetail from './retainerDetail';
+import { logEvent } from './../../tools/analytics';
 
 import './../../assets/css/retainerList.css';
 import { exportPlainTextDetails } from './../../tools/plainTextGenerator';
@@ -31,6 +32,7 @@ class RetainerSummaryList extends Component {
     e.preventDefault();
 
     this.setState({ 'showModal': true, 'active': active });
+    logEvent('modal', {'action': 'open', 'type': 'export-single'});
     return false;
   }
 
@@ -45,6 +47,7 @@ class RetainerSummaryList extends Component {
     card.className = show ? card.className.replace('show', 'hide') : card.className.replace('hide', 'show');
 
     this.setState({ 'showExport': show });
+    logEvent('modal', {'action': 'show-export', 'type': 'export-single'});
     return false;
   }
 
@@ -59,6 +62,7 @@ class RetainerSummaryList extends Component {
 
   handleHide() {
     this.setState({ showModal: false });
+    logEvent('modal', {'action': 'close', 'type': 'export-single'});
     return false;
   }
 
