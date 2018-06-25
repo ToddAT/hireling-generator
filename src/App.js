@@ -15,7 +15,7 @@ import { generateRetainers } from './tools/retainerGenerator';
 import { exportPlainTextSimple, exportPlainTextDetails } from './tools/plainTextGenerator';
 
 import { generateRandomTableEntry } from './tools/tableParser';
-import { logEvent } from './tools/analytics';
+import { logAction, logModal } from './tools/analytics';
 
 class App extends Component {
   constructor(props) {
@@ -57,7 +57,7 @@ class App extends Component {
 
   repopRetainers(e, count = this.state.count) {
     e.preventDefault();
-    logEvent('repop', {'count': count});
+    logAction('view_item_list', 'engagement', 'menu_repop', count);
     this.setState({'retainers': generateRetainers(count)});
   }
 
@@ -65,7 +65,7 @@ class App extends Component {
     e.preventDefault();
 
     this.setState({ 'showModal': true });
-    logEvent('modal', {'action': 'show', 'type': 'export-multi'});
+    logModal('open_export_multi');
     return false;
   }
 
@@ -77,7 +77,6 @@ class App extends Component {
     ), textArea;
 
     ReactDOM.render(content, document.getElementById('modalBoxContent'));
-    logEvent('modal', {'action': 'open', 'type': 'export-multi'});
   }
 
   copyModalContent() {
@@ -96,12 +95,12 @@ class App extends Component {
     }
 
     textArea.parentNode.appendChild(message);
-    logEvent('modal', {'action': 'copy', 'type': 'export-multi'});
+    logModal('copy_export_multi');
   }
 
   handleHideModal() {
     this.setState({ showModal: false });
-    logEvent('modal', {'action': 'hide', 'type': 'export-multi'});
+    logModal('close_export_multi');
     return false;
   }
 
