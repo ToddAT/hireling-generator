@@ -2,9 +2,9 @@
 
 const gtag = window.gtag;
 
-const logEvent = (evtName, action, data = {}) => {
+const logEvent = (action = "", data = {}) => {
 	try {
-		gtag('event', evtName, action, data);
+		gtag('event', action, data);
 	} catch (e) {
 		console.log(e);
 	}
@@ -16,13 +16,13 @@ export const logAction = (action = "", cat = "", label = "", val = 0) => {
 	return logEvent(action, {
 		'event_category': cat,
 		'event_label': label,
-		'value': val,
+		'value': val
 	});
 };
 
 export const logModal = (label = "", val = 0) => {
 	return logEvent('view_item', {
 		'event_label': 'modal_' + label,
-		'value': val,
+		'value': val
 	});
 };
