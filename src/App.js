@@ -124,33 +124,36 @@ class App extends Component {
           <h1 className="App-title">Fifty Random Hirelings for Your OSR-Style Campaign World</h1>
         </header>
 
-        <ButtonToolbar>
-          <ButtonGroup>
-            <DropdownButton title="Recruit More Hirelings">
-              <MenuItem eventKey="1" data-key="50" onClick={ this.updatePopCount }>Fifty</MenuItem>
-              <MenuItem eventKey="2" data-key="25" onClick={ this.updatePopCount }>Twenty-Five</MenuItem>
-              <MenuItem eventKey="3" data-key="10" onClick={ this.updatePopCount }>Ten</MenuItem>
-              <MenuItem eventKey="4" data-key="5" onClick={ this.updatePopCount }>Five</MenuItem>
-            </DropdownButton>
-          </ButtonGroup>
-          <ButtonGroup>
-            <Button onClick={ this.handleShowModal }>
-              Copy These Hirelings to Clipboard
-            </Button>
-          </ButtonGroup>
-        </ButtonToolbar>
+        <section className="App-Main">
+          <ButtonToolbar>
+            <ButtonGroup>
+              <DropdownButton title="Recruit More Hirelings">
+                <MenuItem eventKey="1" data-key="50" onClick={ this.updatePopCount }>Fifty</MenuItem>
+                <MenuItem eventKey="2" data-key="25" onClick={ this.updatePopCount }>Twenty-Five</MenuItem>
+                <MenuItem eventKey="3" data-key="10" onClick={ this.updatePopCount }>Ten</MenuItem>
+                <MenuItem eventKey="4" data-key="5" onClick={ this.updatePopCount }>Five</MenuItem>
+              </DropdownButton>
+            </ButtonGroup>
+            <ButtonGroup>
+              <Button onClick={ this.handleShowModal }>
+                Copy These Hirelings to Clipboard
+              </Button>
+            </ButtonGroup>
+          </ButtonToolbar>
 
-        <div className="content-wrapper">
-          <RetainerSummaryList population={ this.state.retainers } />
+          <div className="content-wrapper">
+            <RetainerSummaryList population={ this.state.retainers } />
 
-          <ModalBox 
-            title={ this.state.modalTitle }
-            show={ this.state.showModal }
-            onHide={ this.handleHideModal }
-            onEnter={ this.handleModalContent }
-            onEntered={ this.copyModalContent }
-          />
-        </div>
+            <ModalBox 
+              title={ this.state.modalTitle }
+              show={ this.state.showModal }
+              onHide={ this.handleHideModal }
+              onEnter={ this.handleModalContent }
+              onEntered={ this.copyModalContent }
+            />
+          </div>
+        </section>
+        
         <footer className="App-footer">
           <p>
             A generator by <a href="http://hexed.press">Hexed Press</a>. Support us via <a href="https://www.patreon.com/hexedpress">Patreon</a>.

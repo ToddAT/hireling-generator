@@ -5,30 +5,37 @@ button {
 }
 
 .App {
+  min-height: 100vh;
+  background: rgba(29, 124, 151, 1.0);
   text-align: center;
 }
 
-.App-header {
-  box-sizing: content-box;
-  padding: 20px;
-  background-color: hsla(350, 84%, 40%, 1.0);
-  color: white;
-}
+  .App-header {
+    box-sizing: content-box;
+    padding: 20px;
+    background-color: hsla(350, 84%, 40%, 1.0);
+    color: white;
+  }
 
-.App-title {
-  font-size: xx-large;
-  font-family: 'Chicle', cursive;
-  color: hsla(57, 97%, 60%, 1.0);
-}
+    .App-title {
+      font-size: xx-large;
+      font-family: 'Chicle', cursive;
+      color: hsla(57, 97%, 60%, 1.0);
+    }
 
-.App-intro {
-  font-size: large;
-  font-family: 'Chicle', cursive;
-  color: #444;
-}
+  .App-Main {
+    padding: 10px 0;
+    background: #fff;
+  }
+
+    .App-intro {
+      font-size: large;
+      font-family: 'Chicle', cursive;
+      color: #444;
+    }
 
 .btn-toolbar {
-  margin: 10px 0;
+  padding: 10px 0;
   font-family: 'Permanent Marker', cursive;
 }
   .btn-toolbar .btn-group {
@@ -51,9 +58,15 @@ button {
   }
 
 .App-footer {
-  font-family: 'Chicle', cursive;
-  color: #444;
+  min-height: 100%;
+  padding: 10px 0;
+  font-family: 'Gaegu', cursive;
+  color: hsla(57, 97%, 60%, 1.0);
 }
+
+  .App-footer a {
+    color: #fff;
+  }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
